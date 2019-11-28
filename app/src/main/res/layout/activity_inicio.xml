@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3F51B5"
+    android:background="#B9FF9800"
     tools:context=".Inicio">
 
     <Button
         android:id="@+id/Enter"
         android:layout_width="236dp"
         android:layout_height="61dp"
+        android:onClick="Enter"
         android:text="@string/inicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,9 +21,10 @@
         app:layout_constraintVertical_bias="0.775" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/LogoMainActivity"
         android:layout_width="276dp"
         android:layout_height="343dp"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
