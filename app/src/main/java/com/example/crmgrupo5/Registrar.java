@@ -2,13 +2,70 @@ package com.example.crmgrupo5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Registrar extends AppCompatActivity {
+
+    private SQLiteDatabase BasseDeDatos;
+    private AdminSQLiteOpenHelper BBDD;
+    private EditText nombreC,apellidoC,correoC;
+    private boolean registrado;
+    private Button registrar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrarCliente);
+        setContentView(R.layout.activity_registrar_cliente);
+        BBDD = new AdminSQLiteOpenHelper(this,"BBDDCliente",null,1);
+        registrar = findViewById(R.id.Registrar);
+
+        registrado = false;
+        nombreC =  findViewById(R.id.nombreCliente);
+        apellidoC = findViewById(R.id.ApellidoCliente);
+        correoC = findViewById(R.id.correoCliente);
+
+        registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RegistrarMetodo(view);
+            }
+        });
+
+    }
+    public void RegistrarMetodo(View view){
+        BasseDeDatos = BBDD.getWritableDatabase();
+        String nombre = nombreC.getText().toString();
+        String apellido = apellidoC.getText().toString();
+        String correo = correoC.getText().toString();
+
+        if(!nombre.isEmpty()& !registrado){
+            ContentValues registro = new ContentValues();
+            registro.put("nombreCliente",nombre);
+            registro.put("apellido",apellido);
+            registro.put("correo",correo);
+
+            BasseDeDatos.insert("BBDDCliente",null,registro);
+
+            BasseDeDatos.close();
+
+            nombreC.setText("");
+            apellidoC.setText("");
+            correoC.setText("");
+            registrado = true;
+        }else{
+            if(nombre.isEmpty()){
+                Toast.makeText(this,"Debes rellenar el nombre",Toast.LENGTH_SHORT).show();
+            }
+            if(registrado){
+                Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
