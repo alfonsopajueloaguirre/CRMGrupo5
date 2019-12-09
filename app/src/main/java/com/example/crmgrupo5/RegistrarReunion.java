@@ -14,23 +14,48 @@ public class RegistrarReunion extends AppCompatActivity {
 
     private SQLiteDatabase BasseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
-    private EditText nombreE,ingresosE,IDE;
+    private EditText nombreCR,dia,mes;
     private boolean registrado;
-    private Button registrar;
+    private Button registrar,si,no;
+    private int recordatorio;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrar_negocio);
+        setContentView(R.layout.activity_registrar_reunion);
         BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
         registrar = findViewById(R.id.registrar);
+        si = findViewById(R.id.si);
+        no = findViewById(R.id.no);
 
         registrado = false;
-        nombreE =  findViewById(R.id.NombreEmpresa);
-        ingresosE = findViewById(R.id.Ingresos);
-        IDE = findViewById(R.id.NIDFiscal);
+        nombreCR =  findViewById(R.id.ClienteReunion);
+        dia = findViewById(R.id.dia);
+        mes = findViewById(R.id.mes);
 
+        si.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                recordatorio = 1;
+                si.setVisibility(View.GONE);
+            }
+        });
+
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                recordatorio = 0;
+                no.setVisibility(View.GONE);
+            }
+        });
+        if(recordatorio==1){
+            no.setVisibility(View.GONE);
+        }
+        if(recordatorio==0){
+            si.setVisibility(View.GONE);
+        }
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,27 +66,28 @@ public class RegistrarReunion extends AppCompatActivity {
     }
     public void RegistrarMetodo(View view){
         BasseDeDatos = BBDD.getWritableDatabase();
-        String nombreEmpresa = nombreE.getText().toString();
-        String ingresos = ingresosE.getText().toString();
-        String id = IDE.getText().toString();
+        String nombreClienteReunion = nombreCR.getText().toString();
+        String diaR = dia.getText().toString();
+        String mesR = mes.getText().toString();
 
-        if(!id.isEmpty()& !registrado){
+        if(dia!=null & !registrado){
             ContentValues registro = new ContentValues();
-            registro.put("nombreEmpresa",nombreEmpresa);
-            registro.put("ingresos",ingresos);
-            registro.put("IdFiscal",id);
+            registro.put("dia",diaR);
+            registro.put("mes",mesR);
+            registro.put("nombreCliente",nombreClienteReunion);
+            registro.put("recordatorio",recordatorio);
 
             BasseDeDatos.insert("BBDDNegocio",null,registro);
 
             BasseDeDatos.close();
 
-            nombreE.setText("");
-            ingresosE.setText("");
-            IDE.setText("");
+            nombreCR.setText("");
+            dia.setText("");
+            mes.setText("");
             registrado = true;
         }else{
-            if(id.isEmpty()){
-                Toast.makeText(this,"Debes rellenar el número de identificación fiscal",Toast.LENGTH_SHORT).show();
+            if(dia==null){
+                Toast.makeText(this,"Debes rellenar el día de la reunión",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
