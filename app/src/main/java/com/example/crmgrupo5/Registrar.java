@@ -23,7 +23,7 @@ public class Registrar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_cliente);
-        BBDD = new AdminSQLiteOpenHelper(this,"BBDDCliente",null,1);
+        BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
         registrar = findViewById(R.id.Registrar);
 
         registrado = false;
@@ -45,7 +45,7 @@ public class Registrar extends AppCompatActivity {
         String apellido = apellidoC.getText().toString();
         String correo = correoC.getText().toString();
 
-        if(!nombre.isEmpty()& !registrado){
+        if(!nombre.isEmpty()&!apellido.isEmpty()&!registrado){
             ContentValues registro = new ContentValues();
             registro.put("nombreCliente",nombre);
             registro.put("apellido",apellido);
@@ -62,6 +62,9 @@ public class Registrar extends AppCompatActivity {
         }else{
             if(nombre.isEmpty()){
                 Toast.makeText(this,"Debes rellenar el nombre",Toast.LENGTH_SHORT).show();
+            }
+            if(apellido.isEmpty()){
+                Toast.makeText(this,"Debes rellenar el apellido",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
