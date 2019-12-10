@@ -5,67 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FF5722"
-    tools:context=".registrarNegocio">
+    tools:context=".Registrar">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="157dp"
-        android:layout_height="169dp"
+    <Button
+        android:id="@+id/Registrar"
+        android:layout_width="237dp"
+        android:layout_height="63dp"
+        android:text="@string/text_registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125"
+        app:layout_constraintVertical_bias="0.787" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="148dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076"
         app:srcCompat="@mipmap/spaa_logo" />
 
     <EditText
-        android:id="@+id/NombreEmpresa"
+        android:id="@+id/nombreCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/text_nombre_Empresa"
+        android:text="@string/text_nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.354" />
 
     <EditText
-        android:id="@+id/NIDFiscal"
+        android:id="@+id/ApellidoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
-        android:text="@string/text_id_fiscal"
+        android:inputType="textPersonName"
+        android:text="@string/text_apellido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693" />
+        app:layout_constraintVertical_bias="0.46" />
 
     <EditText
-        android:id="@+id/Ingresos"
+        android:id="@+id/correoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="textPersonName"
+        android:text="@string/text_correo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568"
-        tools:text="@string/text_ingresos" />
+        app:layout_constraintVertical_bias="0.571" />
 
-    <Button
-        android:id="@+id/registrar"
-        android:layout_width="214dp"
-        android:layout_height="49dp"
-        android:text="@string/text_registrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836" />
 </androidx.constraintlayout.widget.ConstraintLayout>

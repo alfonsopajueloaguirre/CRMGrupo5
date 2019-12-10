@@ -11,5 +11,12 @@
     <string name="text_apellido">Apellido</string>
     <string name="text_correo">Correo</string>
     <string name="text_registrar">Registrar</string>
-
+    <string name="text_nombre_Empresa">Nombre de la empresa</string>
+    <string name="text_ingresos">Ingresos</string>
+    <string name="text_id_fiscal">ID-Fiscal</string>
+    <string name="text_si">SI</string>
+    <string name="text_no">NO</string>
+    <string name="text_recordatorio">Recordatorio</string>
+    <string name="text_dia">Día</string>
+    <string name="text_mes">Mes</string>
 </resources>
