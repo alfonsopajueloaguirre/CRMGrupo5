@@ -3,10 +3,13 @@ package com.example.crmgrupo5;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean registrado;
     String nombreCliente;
     private EditText ETnombre;
+    private Button contactos, negocios, reuniones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +27,33 @@ public class MainActivity extends AppCompatActivity {
         BBDD = new AdminSQLiteOpenHelper(this, "CRM-Clientes", null, 1);
         registrado = false;
         //nombre = (EditText)findViewById(R.id.nombreCliente);
+        contactos = findViewById(R.id.button_contactos);
+        contactos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(MainActivity.this,Contactos.class);
+                startActivity(intent1);
+            }
+        });
+        negocios = findViewById(R.id.button_negocios);
+        negocios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(MainActivity.this,RegistrarNegocio.class);
+                startActivity(intent2);
+            }
+        });
+        reuniones = findViewById(R.id.button_reuniones);
+        reuniones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(MainActivity.this,RegistrarReunion.class);
+                startActivity(intent3);
+            }
+        });
     }
+
+
     public void Registrar(View view){
         //abrir la base de datos modo escritura y lectura
         BaseDeDatos = BBDD.getWritableDatabase();
@@ -49,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
-    }
+
     public void restablecerEstadiaticas (View view){
         BaseDeDatos = BBDD.getWritableDatabase();
         BaseDeDatos.execSQL("DELETE FROM CRM ");

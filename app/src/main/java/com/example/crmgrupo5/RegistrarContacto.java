@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Registrar extends AppCompatActivity {
+public class RegistrarContacto extends AppCompatActivity {
 
     private SQLiteDatabase BasseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
@@ -27,9 +27,9 @@ public class Registrar extends AppCompatActivity {
         registrar = findViewById(R.id.Registrar);
 
         registrado = false;
-        nombreC =  findViewById(R.id.nombreCliente);
-        apellidoC = findViewById(R.id.ApellidoCliente);
-        correoC = findViewById(R.id.correoCliente);
+        nombreC =  findViewById(R.id.input_nombre);
+        apellidoC = findViewById(R.id.input_apellido);
+        correoC = findViewById(R.id.input_correo);
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,5 +70,6 @@ public class Registrar extends AppCompatActivity {
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
+
     }
 }

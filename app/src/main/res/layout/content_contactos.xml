@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Contactos"
+    tools:showIn="@layout/activity_contactos">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_contacto1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_contacto1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_correo1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_correo" />
+
+            <TextView
+                android:id="@+id/textView_nombre1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_nombre" />
+
+            <TextView
+                android:id="@+id/textView_contacto2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_contacto2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_correo2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_correo" />
+
+            <TextView
+                android:id="@+id/textView_nombre2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_nombre" />
+
+            <TextView
+                android:id="@+id/textView_contacto3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_contacto3"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_correo3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_correo" />
+
+            <TextView
+                android:id="@+id/textView_nombre3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_nombre" />
+
+            <TextView
+                android:id="@+id/textView_contacto4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_contacto4"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_correo4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_correo" />
+
+            <TextView
+                android:id="@+id/textView_nombre4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_nombre" />
+
+            <TextView
+                android:id="@+id/textView_contacto5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_contacto5"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_correo5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_correo" />
+
+            <TextView
+                android:id="@+id/textView_nombre5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_nombre" />
+
+            <TextView
+                android:id="@+id/textView_contacto6"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_contacto6"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_correo6"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_correo"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_nombre6"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_nombre"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_contacto7"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_contacto7"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_correo7"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_correo"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_nombre7"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_nombre"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_contacto8"
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="@string/text_contacto8"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_correo8"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_correo"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_nombre8"
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="@string/text_nombre"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

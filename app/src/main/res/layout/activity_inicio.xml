@@ -12,7 +12,7 @@
         android:layout_width="236dp"
         android:layout_height="61dp"
         android:onClick="Enter"
-        android:text="@string/inicio"
+        android:text="@string/text_inicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

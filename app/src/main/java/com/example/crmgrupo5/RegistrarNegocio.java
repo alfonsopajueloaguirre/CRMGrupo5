@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class registrarNegocio extends AppCompatActivity {
+public class RegistrarNegocio extends AppCompatActivity {
 
     private SQLiteDatabase BasseDeDatos;
     private AdminSQLiteOpenHelper BBDD;

@@ -7,41 +7,41 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_contactos"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:text="@string/text_introducir"
+        android:text="@string/text_contactos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.401"
-        tools:text="@string/text_introducir" />
+        tools:text="@string/text_contactos" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_negocios"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:text="@string/text_consultar"
+        android:text="@string/text_negocios"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.54"
-        tools:text="@string/text_consultar" />
+        tools:text="@string/text_negocios" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_reuniones"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:text="@string/text_graficos"
+        android:text="@string/text_reuniones"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.682"
-        tools:text="@string/text_graficos" />
+        tools:text="@string/text_reuniones" />
 
     <Button
         android:id="@+id/button4"
