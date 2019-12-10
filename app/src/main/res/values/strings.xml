@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">CRMGrupo5</string>
 
-    <string name="text_introducir">Introducir datos</string>
-    <string name="text_consultar">Consultar datos</string>
-    <string name="text_graficos">Consultar gráficos</string>
+    <string name="text_contactos">Contactos</string>
+    <string name="text_negocios">Negocios</string>
+    <string name="text_reuniones">Reuniones</string>
     <string name="text_premium">Comprar premium</string>
     <string name="text_logo">Logo</string>
     <string name="text_inicio">MENÚ</string>
@@ -11,5 +11,18 @@
     <string name="text_apellido">Apellido</string>
     <string name="text_correo">Correo</string>
     <string name="text_registrar">Registrar</string>
+    <string name="title_activity_contactos">Contactos</string>
+
+    <string name="text_contacto1">Contacto 1:</string>
+    <string name="text_contacto2">Contacto 2:</string>
+    <string name="text_contacto3">Contacto 3:</string>
+    <string name="text_contacto4">Contacto 4:</string>
+    <string name="text_contacto5">Contacto 5:</string>
+    <string name="text_contacto6">Contacto 6:</string>
+    <string name="text_contacto7">Contacto 7:</string>
+    <string name="text_contacto8">Contacto 8:</string>
+
+    <string name="text_nombre1">Nombre</string>
+    <string name="text_correo1">Correo:</string>
 
 </resources>
