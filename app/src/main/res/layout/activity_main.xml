@@ -57,17 +57,17 @@
         tools:text="@string/text_graficos" />
 
     <ImageView
-        android:id="@+id/imageView_main_spaa"
-        android:layout_width="294dp"
-        android:layout_height="226dp"
+        android:id="@+id/imageView"
+        android:layout_width="347dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="410dp"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056"
-        app:srcCompat="@mipmap/spaa_logo"
-        tools:srcCompat="@mipmap/logomandarina" />
+        app:layout_constraintVertical_bias="0.185"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

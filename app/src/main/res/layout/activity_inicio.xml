@@ -21,15 +21,16 @@
         app:layout_constraintVertical_bias="0.775" />
 
     <ImageView
-        android:id="@+id/LogoMainActivity"
-        android:layout_width="360dp"
-        android:layout_height="374dp"
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176"
-        app:srcCompat="@mipmap/spaa_logo"
-        tools:srcCompat="@mipmap/logomandarina" />
+        app:layout_constraintVertical_bias="0.16"
+        app:srcCompat="@drawable/logo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
