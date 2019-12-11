@@ -34,6 +34,19 @@
     <string name="text_contacto7">Contacto 7:</string>
     <string name="text_contacto8">Contacto 8:</string>
 
+    <string name="text_numero1">1. </string>
+    <string name="text_numero2">2. </string>
+    <string name="text_numero3">3. </string>
+    <string name="text_numero4">4. </string>
+    <string name="text_numero5">5. </string>
+
+    <string name="text_cabecera_numeros">Nº</string>
+    <string name="text_cabecera_nombre">Nombre</string>
+    <string name="text_cabecera_ingresos">Ingresos</string>
+    <string name="text_cabecera_acciones">Acción</string>
+    <string name="text_marketing">Marketing</string>
+
+
     <string name="text_nombre1">Nombre</string>
     <string name="text_correo1">Correo:</string>
     <string name="title_activity_negocios">Negocios</string>

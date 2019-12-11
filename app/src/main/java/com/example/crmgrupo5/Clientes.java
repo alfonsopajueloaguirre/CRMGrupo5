@@ -3,7 +3,6 @@ package com.example.crmgrupo5;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,18 +11,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.ByteArrayInputStream;
 
 public class Clientes extends AppCompatActivity {
 
     private SQLiteDatabase BaseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
     private String tipoBBDD = "BBDDCliente";
-    private Button restablecer;
     private TextView textoContacto1,textoContacto2,textoContacto3,textoContacto4,textoContacto5,textoContacto6;
     private TextView textoNombre1,textoNombre2,textoNombre3,textoNombre4,textoNombre5,textoNombre6;
     private TextView textoApellido1,textoApellido2,textoApellido3,textoApellido4,textoApellido5,textoApellido6;
@@ -64,8 +60,6 @@ public class Clientes extends AppCompatActivity {
         textoCorreo4 = findViewById(R.id.textView_correo4);
         textoCorreo5 = findViewById(R.id.textView_correo5);
         textoCorreo6 = findViewById(R.id.textView_correo6);
-
-        restablecer = findViewById(R.id.button_restablecerContactos);
 
         mostrarClientes();
 
