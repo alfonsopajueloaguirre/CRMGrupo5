@@ -12,7 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.ByteArrayInputStream;
 
@@ -21,6 +23,7 @@ public class Clientes extends AppCompatActivity {
     private SQLiteDatabase BaseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
     private String tipoBBDD = "BBDDCliente";
+    private Button restablecer;
     private TextView textoContacto1,textoContacto2,textoContacto3,textoContacto4,textoContacto5,textoContacto6;
     private TextView textoNombre1,textoNombre2,textoNombre3,textoNombre4,textoNombre5,textoNombre6;
     private TextView textoApellido1,textoApellido2,textoApellido3,textoApellido4,textoApellido5,textoApellido6;
@@ -62,7 +65,7 @@ public class Clientes extends AppCompatActivity {
         textoCorreo5 = findViewById(R.id.textView_correo5);
         textoCorreo6 = findViewById(R.id.textView_correo6);
 
-
+        restablecer = findViewById(R.id.button_restablecerContactos);
 
         mostrarClientes();
 
@@ -120,6 +123,9 @@ public class Clientes extends AppCompatActivity {
                 p6 = fila1.getString(1);
                 c6 = fila1.getString(2);
                 textoContacto6.setVisibility(View.VISIBLE);
+                textoNombre6.setVisibility(View.VISIBLE);
+                textoApellido6.setVisibility(View.VISIBLE);
+                textoCorreo6.setVisibility(View.VISIBLE);
             }
 
 
@@ -162,6 +168,46 @@ public class Clientes extends AppCompatActivity {
 
         BaseDeDatos.close();
 
+    }
+
+    public void restablecerContactos(View view){
+        BaseDeDatos = BBDD.getWritableDatabase();
+
+        BaseDeDatos.execSQL("DELETE FROM "+tipoBBDD);
+        Toast.makeText(this, "Contactos restablecidas", Toast.LENGTH_SHORT).show();
+        BaseDeDatos.close();
+
+        textoContacto1.setVisibility(View.INVISIBLE);
+        textoNombre1.setVisibility(View.INVISIBLE);
+        textoApellido1.setVisibility(View.INVISIBLE);
+        textoCorreo1.setVisibility(View.INVISIBLE);
+
+        textoContacto2.setVisibility(View.INVISIBLE);
+        textoNombre2.setVisibility(View.INVISIBLE);
+        textoApellido2.setVisibility(View.INVISIBLE);
+        textoCorreo2.setVisibility(View.INVISIBLE);
+
+        textoContacto3.setVisibility(View.INVISIBLE);
+        textoNombre3.setVisibility(View.INVISIBLE);
+        textoApellido3.setVisibility(View.INVISIBLE);
+        textoCorreo3.setVisibility(View.INVISIBLE);
+
+        textoContacto4.setVisibility(View.INVISIBLE);
+        textoNombre4.setVisibility(View.INVISIBLE);
+        textoApellido4.setVisibility(View.INVISIBLE);
+        textoCorreo4.setVisibility(View.INVISIBLE);
+
+        textoContacto5.setVisibility(View.INVISIBLE);
+        textoNombre5.setVisibility(View.INVISIBLE);
+        textoApellido5.setVisibility(View.INVISIBLE);
+        textoCorreo5.setVisibility(View.INVISIBLE);
+
+        textoContacto6.setVisibility(View.INVISIBLE);
+        textoNombre6.setVisibility(View.INVISIBLE);
+        textoApellido6.setVisibility(View.INVISIBLE);
+        textoCorreo6.setVisibility(View.INVISIBLE);
+
+        mostrarClientes();
     }
 
 }
