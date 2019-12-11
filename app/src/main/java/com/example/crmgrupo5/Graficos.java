@@ -33,7 +33,7 @@ public class Graficos extends AppCompatActivity {
 
         grafico1 = findViewById(R.id.grafico1);
         grafico2 = findViewById(R.id.grafico2);
-        grafico3 = findViewById(R.id.grafico1);
+        grafico3 = findViewById(R.id.grafico3);
 
         grafico1.setVisibility(View.GONE);
         grafico2.setVisibility(View.GONE);
@@ -53,20 +53,31 @@ public class Graficos extends AppCompatActivity {
     public void calcularPresupuesto(View view){
         String seleccion = spinner.getSelectedItem().toString();
         if (seleccion.equals("Televisión")) {
-            textCostes.setText("10.000");
-            textGanancias.setText("20.000");
+            textCostes.setText("10.000 €");
+            textGanancias.setText("20.000 €");
+            textGanancias.setVisibility(View.VISIBLE);
+            textCostes.setVisibility(View.VISIBLE);
             // codigo set cuadrado a rojo ID (integer) IDColor (integer)
         }
         if (seleccion.equals("Radio")) {
-
+            textCostes.setText("2.000 €");
+            textGanancias.setText("4.000 €");
+            textGanancias.setVisibility(View.VISIBLE);
+            textCostes.setVisibility(View.VISIBLE);
             // codigo set cuadrado a rojo ID (integer) IDColor (integer)
         }
         if (seleccion.equals("Redes Sociales")) {
-
+            textCostes.setText("1.000 €");
+            textGanancias.setText("2.000 €");
+            textGanancias.setVisibility(View.VISIBLE);
+            textCostes.setVisibility(View.VISIBLE);
             // codigo set cuadrado a rojo ID (integer) IDColor (integer)
         }
-        if (seleccion.equals("Anucios web")) {
-
+        if (seleccion.equals("Anuncios web")) {
+            textCostes.setText("5.000 €");
+            textGanancias.setText("10.000 €");
+            textGanancias.setVisibility(View.VISIBLE);
+            textCostes.setVisibility(View.VISIBLE);
             // codigo set cuadrado a rojo ID (integer) IDColor (integer)
         }
     }
