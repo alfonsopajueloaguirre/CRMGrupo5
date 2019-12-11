@@ -22,7 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/text_contacto1"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_correo1"
@@ -37,11 +38,18 @@
                 android:text="@string/text_nombre" />
 
             <TextView
+                android:id="@+id/textView_apellido1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_apellido" />
+
+            <TextView
                 android:id="@+id/textView_contacto2"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/text_contacto2"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_correo2"
@@ -56,11 +64,18 @@
                 android:text="@string/text_nombre" />
 
             <TextView
+                android:id="@+id/textView_apellido2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_apellido" />
+
+            <TextView
                 android:id="@+id/textView_contacto3"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/text_contacto3"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_correo3"
@@ -75,11 +90,18 @@
                 android:text="@string/text_nombre" />
 
             <TextView
+                android:id="@+id/textView_apellido3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_apellido" />
+
+            <TextView
                 android:id="@+id/textView_contacto4"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/text_contacto4"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_correo4"
@@ -94,23 +116,39 @@
                 android:text="@string/text_nombre" />
 
             <TextView
+                android:id="@+id/textView_apellido4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_apellido" />
+
+            <TextView
                 android:id="@+id/textView_contacto5"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/text_contacto5"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/textView_correo5"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="@string/text_correo" />
+                android:text="@string/text_correo"
+                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/textView_nombre5"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="@string/text_nombre" />
+                android:text="@string/text_nombre"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_apellido5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_apellido"
+                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/textView_contacto6"
@@ -133,6 +171,13 @@
                 android:layout_height="40dp"
                 android:text="@string/text_nombre"
                 android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_apellido6"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/text_apellido"
+                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/textView_contacto7"

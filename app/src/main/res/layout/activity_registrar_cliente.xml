@@ -68,7 +68,7 @@
         app:srcCompat="@mipmap/spaa_logo" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layour_nombre"
+        android:id="@+id/layout_nombre"
         android:layout_width="254dp"
         android:layout_height="59dp"
         app:layout_constraintBottom_toBottomOf="parent"
