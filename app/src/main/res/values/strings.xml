@@ -42,5 +42,10 @@
     <string name="text_numCostes">Número Costes</string>
     <string name="text_numGanancias">Número Ganacias</string>
 
+    <string name="text_costes">COSTES</string>
+    <string name="text_ganancias">GANANCIAS</string>
+    <string name="text_presupuesto">Calcular presupuesto</string>
+    <string name="text_operacion">Realizar Operacion</string>
+
 
 </resources>
