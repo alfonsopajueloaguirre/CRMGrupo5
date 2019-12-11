@@ -39,5 +39,9 @@
     <string name="title_activity_reuniones">Reuniones</string>
     <string name="title_activity_clientes">Clientes</string>
 
+    <string name="text_costes">COSTES</string>
+    <string name="text_ganancias">GANANCIAS</string>
+    <string name="text_presupuesto">Calcular presupuesto</string>
+    <string name="text_operacion">Realizar Operacion</string>
 
 </resources>
