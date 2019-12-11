@@ -23,7 +23,7 @@ public class RegistrarCliente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_cliente);
-        BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
+        BBDD = new AdminSQLiteOpenHelper(this,"BBDDCliente",null,1);
         registrar = findViewById(R.id.Registrar);
 
         registrado = false;
