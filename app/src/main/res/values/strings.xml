@@ -4,7 +4,7 @@
     <string name="text_clientes">Clientes</string>
     <string name="text_negocios">Negocios</string>
     <string name="text_reuniones">Reuniones</string>
-    <string name="text_premium">Comprar premium</string>
+    <string name="text_graficos">Ver gráficos</string>
     <string name="text_logo">Logo</string>
     <string name="text_inicio">MENÚ</string>
     <string name="text_nombre">Nombre</string>
@@ -15,9 +15,12 @@
     <string name="text_nombre_Empresa">Nombre de la empresa</string>
     <string name="text_ingresos">Ingresos</string>
     <string name="text_id_fiscal">ID-Fiscal</string>
+
+    <string name="text_recordatorio">Recordatorio</string>
     <string name="text_si">SI</string>
     <string name="text_no">NO</string>
-    <string name="text_recordatorio">Recordatorio</string>
+    <string name="text_nombre_reunion">Nombre de la reunión</string>
+    <string name="text_fecha_reunion">Fecha de la reunión</string>
     <string name="text_dia">Día</string>
     <string name="text_mes">Mes</string>
 

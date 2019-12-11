@@ -14,7 +14,7 @@ public class RegistrarReunion extends AppCompatActivity {
 
     private SQLiteDatabase BasseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
-    private EditText nombreCR,dia,mes;
+    private EditText nombreCR,fecha;
     private boolean registrado;
     private Button registrar,si,no;
     private int recordatorio;
@@ -25,15 +25,14 @@ public class RegistrarReunion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_reunion);
-        BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
+        /*BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
         registrar = findViewById(R.id.registrar);
         si = findViewById(R.id.si);
         no = findViewById(R.id.no);
 
         registrado = false;
-        nombreCR =  findViewById(R.id.ClienteReunion);
-        dia = findViewById(R.id.dia);
-        mes = findViewById(R.id.mes);
+        nombreCR =  findViewById(R.id.input_reunion);
+        fecha = findViewById(R.id.editText_fecha_reunion);
 
         si.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,19 +60,19 @@ public class RegistrarReunion extends AppCompatActivity {
             public void onClick(View view) {
                 RegistrarMetodo(view);
             }
-        });
+        });*/
 
     }
-    public void RegistrarMetodo(View view){
+    /*public void RegistrarMetodo(View view){
         BasseDeDatos = BBDD.getWritableDatabase();
         String nombreClienteReunion = nombreCR.getText().toString();
-        String diaR = dia.getText().toString();
-        String mesR = mes.getText().toString();
+        String diaR = fecha.getText().toString();
+        //String mesR = mes.getText().toString();
 
-        if(dia!=null & !registrado){
+        if(fecha!=null & !registrado){
             ContentValues registro = new ContentValues();
-            registro.put("dia",diaR);
-            registro.put("mes",mesR);
+            //registro.put("fecha",fecha);
+            //registro.put("mes",mesR);
             registro.put("nombreCliente",nombreClienteReunion);
             registro.put("recordatorio",recordatorio);
 
@@ -82,16 +81,16 @@ public class RegistrarReunion extends AppCompatActivity {
             BasseDeDatos.close();
 
             nombreCR.setText("");
-            dia.setText("");
-            mes.setText("");
+            fecha.setText("");
+            //mes.setText("");
             registrado = true;
         }else{
-            if(dia==null){
-                Toast.makeText(this,"Debes rellenar el día de la reunión",Toast.LENGTH_SHORT).show();
+            if(fecha==null){
+                Toast.makeText(this,"Debes rellenar la fecha de la reunión",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
-    }
+    }*/
 }

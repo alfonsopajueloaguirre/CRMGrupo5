@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean registrado;
     String nombreCliente;
     private EditText ETnombre;
-    private Button contactos, negocios, reuniones;
+    private Button contactos, negocios, reuniones, graficos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent3 = new Intent(MainActivity.this,Reuniones.class);
+                startActivity(intent3);
+            }
+        });
+        graficos = findViewById(R.id.button_graficos);
+        graficos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(MainActivity.this,Graficos.class);
                 startActivity(intent3);
             }
         });
