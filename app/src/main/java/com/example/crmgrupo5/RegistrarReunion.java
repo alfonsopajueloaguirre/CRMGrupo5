@@ -25,7 +25,7 @@ public class RegistrarReunion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_reunion);
-        /*BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
+        BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
         registrar = findViewById(R.id.registrar);
         si = findViewById(R.id.si);
         no = findViewById(R.id.no);
@@ -60,20 +60,19 @@ public class RegistrarReunion extends AppCompatActivity {
             public void onClick(View view) {
                 RegistrarMetodo(view);
             }
-        });*/
+        });
 
     }
-    /*public void RegistrarMetodo(View view){
+    public void RegistrarMetodo(View view){
         BasseDeDatos = BBDD.getWritableDatabase();
         String nombreClienteReunion = nombreCR.getText().toString();
         String diaR = fecha.getText().toString();
-        //String mesR = mes.getText().toString();
 
         if(fecha!=null & !registrado){
             ContentValues registro = new ContentValues();
-            //registro.put("fecha",fecha);
-            //registro.put("mes",mesR);
+
             registro.put("nombreCliente",nombreClienteReunion);
+            registro.put("fecha",diaR);
             registro.put("recordatorio",recordatorio);
 
             BasseDeDatos.insert("BBDDNegocio",null,registro);
@@ -82,15 +81,15 @@ public class RegistrarReunion extends AppCompatActivity {
 
             nombreCR.setText("");
             fecha.setText("");
-            //mes.setText("");
             registrado = true;
+            recordatorio = -1;
         }else{
             if(fecha==null){
-                Toast.makeText(this,"Debes rellenar la fecha de la reunión",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Debes rellenar el nombre del cliente",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
-    }*/
+    }
 }
