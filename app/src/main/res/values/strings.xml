@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">CRMGrupo5</string>
 
-    <string name="text_contactos">Contactos</string>
+    <string name="text_clientes">Clientes</string>
     <string name="text_negocios">Negocios</string>
     <string name="text_reuniones">Reuniones</string>
     <string name="text_premium">Comprar premium</string>
@@ -20,7 +20,6 @@
     <string name="text_recordatorio">Recordatorio</string>
     <string name="text_dia">Día</string>
     <string name="text_mes">Mes</string>
-    <string name="title_activity_contactos">Contactos</string>
 
     <string name="text_contacto1">Contacto 1:</string>
     <string name="text_contacto2">Contacto 2:</string>
@@ -33,5 +32,9 @@
 
     <string name="text_nombre1">Nombre</string>
     <string name="text_correo1">Correo:</string>
+    <string name="title_activity_negocios">Negocios</string>
+    <string name="title_activity_reuniones">Reuniones</string>
+    <string name="title_activity_clientes">Clientes</string>
+
 
 </resources>

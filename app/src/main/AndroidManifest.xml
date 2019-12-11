@@ -9,21 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".graficos"></activity>
         <activity
-            android:name=".Contactos"
-            android:label="@string/title_activity_contactos"
+            android:name=".Reuniones"
+            android:label="@string/title_activity_reuniones"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".RegistrarReunion" />
-        <activity android:name=".RegistrarNegocio" />
         <activity
-            android:name=".RegistrarContacto"
-            android:label="Registrar Contacto"/>
+            android:name=".Negocios"
+            android:label="@string/title_activity_negocios"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Graficos" />
+        <activity
+            android:name=".Clientes"
+            android:label="@string/title_activity_clientes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegistrarReunion"
+            android:label="Registrar reunión"/>
+        <activity
+            android:name=".RegistrarNegocio"
+            android:label="Registrar negocio"/>
+        <activity
+            android:name=".RegistrarCliente"
+            android:label="Registrar cliente" />
         <activity
             android:name=".Inicio"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -10,7 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-public class Contactos extends AppCompatActivity {
+public class Clientes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class Contactos extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Contactos.this,RegistrarContacto.class);
+                Intent intent = new Intent(Clientes.this, RegistrarCliente.class);
                 startActivity(intent);
 
             }

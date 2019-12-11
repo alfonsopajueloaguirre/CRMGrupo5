@@ -10,14 +10,14 @@
         android:id="@+id/button_contactos"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:text="@string/text_contactos"
+        android:text="@string/text_clientes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.401"
-        tools:text="@string/text_contactos" />
+        tools:text="@string/text_clientes" />
 
     <Button
         android:id="@+id/button_negocios"

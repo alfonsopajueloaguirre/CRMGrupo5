@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         contactos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(MainActivity.this,Contactos.class);
+                Intent intent1 = new Intent(MainActivity.this, Clientes.class);
                 startActivity(intent1);
             }
         });
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         negocios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(MainActivity.this,RegistrarNegocio.class);
+                Intent intent2 = new Intent(MainActivity.this,Negocios.class);
                 startActivity(intent2);
             }
         });
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         reuniones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(MainActivity.this,RegistrarReunion.class);
+                Intent intent3 = new Intent(MainActivity.this,Reuniones.class);
                 startActivity(intent3);
             }
         });

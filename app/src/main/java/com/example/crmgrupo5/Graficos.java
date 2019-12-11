@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class graficos extends AppCompatActivity {
+public class Graficos extends AppCompatActivity {
 
     private ImageView grafico1,grafico2,grafico3;
     double random;
