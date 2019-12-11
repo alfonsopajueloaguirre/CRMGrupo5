@@ -70,6 +70,7 @@ public class RegistrarCliente extends AppCompatActivity {
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
+        Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
 
     }
 }
