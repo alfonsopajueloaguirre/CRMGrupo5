@@ -83,6 +83,7 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calcularPresupuesto"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +96,7 @@
         android:id="@+id/numCostes"
         android:layout_width="100dp"
         android:layout_height="32dp"
-        android:text="TextView"
+        android:text="@string/text_numCostes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.893"
@@ -104,15 +105,26 @@
         app:layout_constraintVertical_bias="0.54" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/numGanancias"
         android:layout_width="100dp"
         android:layout_height="32dp"
-        android:text="TextView"
+        android:text="@string/text_numGanancias"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.616" />
+
+    <Spinner
+        android:id="@+id/spinner_operaciones"
+        android:layout_width="260dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.688" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
