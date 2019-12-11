@@ -27,9 +27,9 @@ public class RegistrarNegocio extends AppCompatActivity {
         registrar = findViewById(R.id.registrar);
 
         registrado = false;
-        nombreE =  findViewById(R.id.NombreEmpresa);
-        ingresosE = findViewById(R.id.Ingresos);
-        IDE = findViewById(R.id.NIDFiscal);
+        nombreE =  findViewById(R.id.input_empresa);
+        ingresosE = findViewById(R.id.editText_ingresos);
+        IDE = findViewById(R.id.input_fiscal);
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
