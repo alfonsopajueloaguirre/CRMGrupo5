@@ -107,18 +107,11 @@ public class Negocios extends AppCompatActivity {
             p4="";
             p5="";
         }
-
-        textoNegocio1.setText(j1);
-        textoNegocio2.setText(j2);
-        textoNegocio3.setText(j3);
-        textoNegocio4.setText(j4);
-        textoNegocio5.setText(j5);
-
-        textoIngreso1.setText(p1);
-        textoIngreso2.setText(p2);
-        textoIngreso3.setText(p3);
-        textoIngreso4.setText(p4);
-        textoIngreso5.setText(p5);
+        visibilidad(j1,p1,textoNegocio1,textoIngreso1);
+        visibilidad(j2,p2,textoNegocio2,textoIngreso2);
+        visibilidad(j3,p3,textoNegocio3,textoIngreso3);
+        visibilidad(j4,p4,textoNegocio4,textoIngreso4);
+        visibilidad(j5,p5,textoNegocio5,textoIngreso5);
 
         BaseDeDatos.close();
 
@@ -126,6 +119,14 @@ public class Negocios extends AppCompatActivity {
     public void goGraficos(View view){
         Intent intent3 = new Intent(Negocios.this,Graficos.class);
         startActivity(intent3);
+    }
+    public void visibilidad(String i, String j, TextView txt, TextView txt2){
+        if(i!=null){
+            txt.setText(i);
+            txt2.setText(j);
+        }else{
+            txt.setVisibility(View.GONE);
+        }
     }
 
 }
