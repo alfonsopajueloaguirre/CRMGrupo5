@@ -63,6 +63,9 @@ public class RegistrarNegocio extends AppCompatActivity {
             ingresosE.setText("");
 
             registrado = true;
+            Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
+            Intent intent1 = new Intent(RegistrarNegocio.this, Negocios.class);
+            startActivity(intent1);
         }else{
             if(nombreEmpresa.isEmpty()){
                 Toast.makeText(this,"Debes rellenar el número de identificación fiscal",Toast.LENGTH_SHORT).show();
@@ -71,8 +74,5 @@ public class RegistrarNegocio extends AppCompatActivity {
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
-        Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
-        Intent intent1 = new Intent(RegistrarNegocio.this, Negocios.class);
-        startActivity(intent1);
     }
 }
