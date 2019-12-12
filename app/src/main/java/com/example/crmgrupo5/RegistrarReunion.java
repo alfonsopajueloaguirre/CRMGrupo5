@@ -55,7 +55,7 @@ public class RegistrarReunion extends AppCompatActivity {
             registro.put("fecha",diaR);
             registro.put("recordatorio",recordatorio);
 
-            BasseDeDatos.insert("BBDDNegocio",null,registro);
+            BasseDeDatos.insert("BBDDReuniones",null,registro);
 
             BasseDeDatos.close();
 

@@ -168,7 +168,7 @@ public class Clientes extends AppCompatActivity {
         BaseDeDatos = BBDD.getWritableDatabase();
 
         BaseDeDatos.execSQL("DELETE FROM "+tipoBBDD);
-        Toast.makeText(this, "Contactos restablecidas", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Contactos restablecidos", Toast.LENGTH_SHORT).show();
         BaseDeDatos.close();
 
         textoContacto1.setVisibility(View.INVISIBLE);

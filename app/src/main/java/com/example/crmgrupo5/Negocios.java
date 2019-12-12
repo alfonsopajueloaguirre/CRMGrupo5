@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Negocios extends AppCompatActivity {
 
@@ -154,6 +155,41 @@ public class Negocios extends AppCompatActivity {
     public void goGraficos(View view){
         Intent intent3 = new Intent(Negocios.this,Graficos.class);
         startActivity(intent3);
+    }
+
+    public void restablecerNegocios(View view){
+        BaseDeDatos = BBDD.getWritableDatabase();
+
+        BaseDeDatos.execSQL("DELETE FROM "+tipoBBDD);
+        Toast.makeText(this, "Negocios restablecidos", Toast.LENGTH_SHORT).show();
+        BaseDeDatos.close();
+
+        textoNegocio1.setVisibility(View.INVISIBLE);
+        textoIngreso1.setVisibility(View.INVISIBLE);
+        textoNumero1.setVisibility(View.INVISIBLE);
+        buttonMark1.setVisibility(View.INVISIBLE);
+
+        textoNegocio2.setVisibility(View.INVISIBLE);
+        textoIngreso2.setVisibility(View.INVISIBLE);
+        textoNumero2.setVisibility(View.INVISIBLE);
+        buttonMark2.setVisibility(View.INVISIBLE);
+
+        textoNegocio3.setVisibility(View.INVISIBLE);
+        textoIngreso3.setVisibility(View.INVISIBLE);
+        textoNumero3.setVisibility(View.INVISIBLE);
+        buttonMark3.setVisibility(View.INVISIBLE);
+
+        textoNegocio4.setVisibility(View.INVISIBLE);
+        textoIngreso4.setVisibility(View.INVISIBLE);
+        textoNumero4.setVisibility(View.INVISIBLE);
+        buttonMark4.setVisibility(View.INVISIBLE);
+
+        textoNegocio5.setVisibility(View.INVISIBLE);
+        textoIngreso5.setVisibility(View.INVISIBLE);
+        textoNumero5.setVisibility(View.INVISIBLE);
+        buttonMark5.setVisibility(View.INVISIBLE);
+
+        mostrarNegocios();
     }
 
 }

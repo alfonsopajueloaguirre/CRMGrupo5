@@ -12,6 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Reuniones extends AppCompatActivity {
     private SQLiteDatabase BaseDeDatos;
@@ -127,6 +128,35 @@ public class Reuniones extends AppCompatActivity {
 
         BaseDeDatos.close();
 
+    }
+    public void restablecerReuniones(View view){
+        BaseDeDatos = BBDD.getWritableDatabase();
+
+        BaseDeDatos.execSQL("DELETE FROM "+tipoBBDD);
+        Toast.makeText(this, "Reuniones restablecidas", Toast.LENGTH_SHORT).show();
+        BaseDeDatos.close();
+
+        textoReunion1.setVisibility(View.INVISIBLE);
+        textoDia1.setVisibility(View.INVISIBLE);
+        textoMes1.setVisibility(View.INVISIBLE);
+
+        textoReunion2.setVisibility(View.INVISIBLE);
+        textoDia2.setVisibility(View.INVISIBLE);
+        textoMes2.setVisibility(View.INVISIBLE);
+
+        textoReunion3.setVisibility(View.INVISIBLE);
+        textoDia3.setVisibility(View.INVISIBLE);
+        textoMes3.setVisibility(View.INVISIBLE);
+
+        textoReunion3.setVisibility(View.INVISIBLE);
+        textoDia3.setVisibility(View.INVISIBLE);
+        textoMes3.setVisibility(View.INVISIBLE);
+
+        textoReunion3.setVisibility(View.INVISIBLE);
+        textoDia3.setVisibility(View.INVISIBLE);
+        textoMes3.setVisibility(View.INVISIBLE);
+
+        mostrarReuniones();
     }
 
 }

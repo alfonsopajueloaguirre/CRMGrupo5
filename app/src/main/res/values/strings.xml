@@ -4,6 +4,8 @@
     <string name="text_clientes">Clientes</string>
     <string name="text_cliente">Cliente</string>
     <string name="text_restablecer_clientes">Restablecer Clientes</string>
+    <string name="text_restablecer_reuniones">Restablecer Reuniones</string>
+    <string name="text_restablecer_negocios">Restablecer Negocios</string>
     <string name="text_negocios">Negocios</string>
     <string name="text_reuniones">Reuniones</string>
     <string name="text_graficos">Ver gráficos</string>
