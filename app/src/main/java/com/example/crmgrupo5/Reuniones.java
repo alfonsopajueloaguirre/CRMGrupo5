@@ -62,7 +62,7 @@ public class Reuniones extends AppCompatActivity {
     public void mostrarReuniones(){
         BaseDeDatos = BBDD.getWritableDatabase();
         String columnas[] = new String[]{"reunion","mes","dia"};
-        String j1="",j2="",j3="",j4="",j5="",j6="",p1="",p2="",p3="",p4="",p5="",p6="",c1="",c2="",c3="",c4="",c5="",c6="";
+        String j1="",j2="",j3="",j4="",j5="",p1="",p2="",p3="",p4="",p5="",c1="",c2="",c3="",c4="",c5="";
         String empty ="";
 
         Cursor fila1 = BaseDeDatos.rawQuery("select * from "+tipoBBDD+"  order by nombreCliente ASC",null);
@@ -99,13 +99,11 @@ public class Reuniones extends AppCompatActivity {
             j3="";
             j4="";
             j5="";
-            j6="";
             p1="";
             p2="";
             p3="";
             p4="";
             p5="";
-            p6="";
         }
 
         textoReunion1.setText(j1);
