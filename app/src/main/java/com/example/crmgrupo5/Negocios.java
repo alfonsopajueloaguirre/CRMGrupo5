@@ -94,31 +94,31 @@ public class Negocios extends AppCompatActivity {
             }
         }else {
 
-            j1="";
-            j2="";
-            j3="";
-            j4="";
-            j5="";
-            p1="";
-            p2="";
-            p3="";
-            p4="";
-            p5="";
+            j1=empty;
+            j2=empty;
+            j3=empty;
+            j4=empty;
+            j5=empty;
+            p1=empty;
+            p2=empty;
+            p3=empty;
+            p4=empty;
+            p5=empty;
         }
 
-        if(j1==null){
+        if(j1==empty){
             textoNumero1.setVisibility(View.GONE);
         }
-        if(j2==null){
+        if(j2==empty){
             textoNumero2.setVisibility(View.GONE);
         }
-        if(j3==null){
+        if(j3==empty){
             textoNumero3.setVisibility(View.GONE);
         }
-        if(j4==null){
+        if(j4==empty){
             textoNumero4.setVisibility(View.GONE);
         }
-        if(j5==null){
+        if(j5==empty){
             textoNumero5.setVisibility(View.GONE);
         }
 
