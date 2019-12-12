@@ -122,7 +122,7 @@ public class Negocios extends AppCompatActivity {
             textoNumero5.setVisibility(View.GONE);
         }
 
-
+        visibilidad(j1,p1,textoNegocio2,textoIngreso2);
         visibilidad(j2,p2,textoNegocio2,textoIngreso2);
         visibilidad(j3,p3,textoNegocio3,textoIngreso3);
         visibilidad(j4,p4,textoNegocio4,textoIngreso4);
