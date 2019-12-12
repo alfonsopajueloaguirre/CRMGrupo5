@@ -81,7 +81,6 @@ public class Negocios extends AppCompatActivity {
             j1 = fila1.getString(0);
             p1 = fila1.getString(1);
 
-
             if (fila1.moveToNext()) {
                 j2 = fila1.getString(0);
                 p2 = fila1.getString(1);

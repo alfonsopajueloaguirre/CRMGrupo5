@@ -121,8 +121,6 @@ public class Clientes extends AppCompatActivity {
                 textoApellido6.setVisibility(View.VISIBLE);
                 textoCorreo6.setVisibility(View.VISIBLE);
             }
-
-
         }else {
 
             j1=empty;
@@ -176,7 +174,6 @@ public class Clientes extends AppCompatActivity {
         textoCorreo4.setText(c4);
         textoCorreo5.setText(c5);
         textoCorreo6.setText(c6);
-
 
         BaseDeDatos.close();
 

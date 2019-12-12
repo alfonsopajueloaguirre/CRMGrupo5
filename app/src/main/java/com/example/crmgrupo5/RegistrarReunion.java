@@ -3,6 +3,7 @@ package com.example.crmgrupo5;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -25,19 +26,14 @@ public class RegistrarReunion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_reunion);
-        BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
+        BBDD = new AdminSQLiteOpenHelper(this,"BBDDReuniones",null,1);
         registrar = findViewById(R.id.registrar);
 
         registrado = false;
         nombreCR =  findViewById(R.id.input_reunion);
         mes = findViewById(R.id.input_mes);
         dia = findViewById(R.id.editText_Dia);
-        registrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                RegistrarMetodo(view);
-            }
-        });
+
 
     }
     public void RegistrarMetodo(View view){
@@ -60,9 +56,13 @@ public class RegistrarReunion extends AppCompatActivity {
             nombreCR.setText("");
             mes.setText("");
             dia.setText("");
+
             registrado = true;
+            Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
+            Intent intent1 = new Intent(RegistrarReunion.this, Reuniones.class);
+            startActivity(intent1);
         }else{
-            if(nombreClienteReunion==null){
+            if(nombreClienteReunion.isEmpty()){
                 Toast.makeText(this,"Debes rellenar el nombre del cliente",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
