@@ -26,7 +26,7 @@ public class RegistrarReunion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_reunion);
-        BBDD = new AdminSQLiteOpenHelper(this,"BBDDReuniones",null,1);
+        BBDD = new AdminSQLiteOpenHelper(this,"BBDDReunion",null,1);
         registrarReunion = findViewById(R.id.registrar_reunion);
 
         registrado = false;
@@ -55,7 +55,7 @@ public class RegistrarReunion extends AppCompatActivity {
             registro.put("mes",mesR);
             registro.put("dia",diaR);
 
-            BaseDeDatosReuniones.insert("BBDDReuniones",null,registro);
+            BaseDeDatosReuniones.insert("BBDDReunion",null,registro);
 
             BaseDeDatosReuniones.close();
 
@@ -65,20 +65,20 @@ public class RegistrarReunion extends AppCompatActivity {
 
             registrado = true;
 
+            Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
+            Intent intent1 = new Intent(RegistrarReunion.this, Reuniones.class);
+            startActivity(intent1);
         }else{
             if(mesR.isEmpty()){
                 Toast.makeText(this,"Debes rellenar el nombre",Toast.LENGTH_SHORT).show();
             }
             if(diaR.isEmpty()){
-                Toast.makeText(this,"Debes rellenar el apellido",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Debes rellenar el mes",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
-        Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
-        Intent intent1 = new Intent(RegistrarReunion.this, Reuniones.class);
-        startActivity(intent1);
 
     }
 }

@@ -18,14 +18,14 @@ public class Reuniones extends AppCompatActivity {
 
     private SQLiteDatabase BaseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
-    private String tipoBBDD = "BBDDReuniones";
+    private String tipoBBDD = "BBDDReunion";
     private TextView textoReunion1,textoReunion2,textoReunion3,textoReunion4,textoReunion5;
     private TextView textoMes1,textoMes2,textoMes3,textoMes4,textoMes5;
     private TextView textoDia1,textoDia2,textoDia3,textoDia4,textoDia5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        BBDD = new AdminSQLiteOpenHelper(this, "BBDDReuniones", null, 1);
+        BBDD = new AdminSQLiteOpenHelper(this, "BBDDReunion", null, 1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reuniones);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -66,32 +66,33 @@ public class Reuniones extends AppCompatActivity {
         String j1="",j2="",j3="",j4="",j5="",p1="",p2="",p3="",p4="",p5="",c1="",c2="",c3="",c4="",c5="";
         String empty = "";
 
-        Cursor fila1 = BaseDeDatos.rawQuery("select * from "+tipoBBDD+"  order by nombreReunion ASC",null);
+        Cursor fila2 = BaseDeDatos.rawQuery("select * from "+tipoBBDD+"  order by mes ASC",null);
+        //Cursor fila1 = BaseDeDatos.query("BBDDReunion", columnas, null, null, null, null, "nombreReunion"+"ASC");
 
-        if(fila1.moveToFirst()) {
-            j1 = fila1.getString(0);
-            p1 = fila1.getString(1);
-            c1 = fila1.getString(2);
+        if(fila2.moveToFirst()) {
+            j1 = fila2.getString(0);
+            p1 = fila2.getString(1);
+            c1 = fila2.getString(2);
 
-            if (fila1.moveToNext()) {
-                j2 = fila1.getString(0);
-                p2 = fila1.getString(1);
-                c2 = fila1.getString(2);
+            if (fila2.moveToNext()) {
+                j2 = fila2.getString(0);
+                p2 = fila2.getString(1);
+                c2 = fila2.getString(2);
             }
-            if (fila1.moveToNext()) {
-                j3 = fila1.getString(0);
-                p3 = fila1.getString(1);
-                c3 = fila1.getString(2);
+            if (fila2.moveToNext()) {
+                j3 = fila2.getString(0);
+                p3 = fila2.getString(1);
+                c3 = fila2.getString(2);
             }
-            if (fila1.moveToNext()) {
-                j4 = fila1.getString(0);
-                p4 = fila1.getString(1);
-                c4 = fila1.getString(2);
+            if (fila2.moveToNext()) {
+                j4 = fila2.getString(0);
+                p4 = fila2.getString(1);
+                c4 = fila2.getString(2);
             }
-            if (fila1.moveToNext()) {
-                j5 = fila1.getString(0);
-                p5 = fila1.getString(1);
-                c5 = fila1.getString(2);
+            if (fila2.moveToNext()) {
+                j5 = fila2.getString(0);
+                p5 = fila2.getString(1);
+                c5 = fila2.getString(2);
             }
         }else {
 
@@ -148,13 +149,13 @@ public class Reuniones extends AppCompatActivity {
         textoDia3.setVisibility(View.INVISIBLE);
         textoMes3.setVisibility(View.INVISIBLE);
 
-        textoReunion3.setVisibility(View.INVISIBLE);
-        textoDia3.setVisibility(View.INVISIBLE);
-        textoMes3.setVisibility(View.INVISIBLE);
+        textoReunion4.setVisibility(View.INVISIBLE);
+        textoDia4.setVisibility(View.INVISIBLE);
+        textoMes4.setVisibility(View.INVISIBLE);
 
-        textoReunion3.setVisibility(View.INVISIBLE);
-        textoDia3.setVisibility(View.INVISIBLE);
-        textoMes3.setVisibility(View.INVISIBLE);
+        textoReunion5.setVisibility(View.INVISIBLE);
+        textoDia5.setVisibility(View.INVISIBLE);
+        textoMes5.setVisibility(View.INVISIBLE);
 
         mostrarReuniones();
     }
