@@ -2,6 +2,7 @@
     <string name="app_name">CRMGrupo5</string>
 
     <string name="text_clientes">Clientes</string>
+    <string name="text_cliente">Cliente</string>
     <string name="text_restablecer_clientes">Restablecer Clientes</string>
     <string name="text_negocios">Negocios</string>
     <string name="text_reuniones">Reuniones</string>
