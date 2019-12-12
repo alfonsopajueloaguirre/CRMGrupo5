@@ -54,6 +54,7 @@
     <string name="title_activity_negocios">Negocios</string>
     <string name="title_activity_reuniones">Reuniones</string>
     <string name="title_activity_clientes">Clientes</string>
+    <string name="title_activity_graficos">Gráficos</string>
 
     <string name="text_numCostes">Número Costes</string>
     <string name="text_numGanancias">Número Ganacias</string>

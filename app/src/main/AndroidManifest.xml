@@ -17,7 +17,9 @@
             android:name=".Negocios"
             android:label="@string/title_activity_negocios"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Graficos" />
+        <activity
+            android:name=".Graficos"
+            android:label="@string/title_activity_graficos" />
         <activity
             android:name=".Clientes"
             android:label="@string/title_activity_clientes"

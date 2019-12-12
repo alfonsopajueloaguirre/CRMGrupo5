@@ -2,6 +2,7 @@ package com.example.crmgrupo5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Graficos extends AppCompatActivity {
 
@@ -80,6 +82,12 @@ public class Graficos extends AppCompatActivity {
             textCostes.setVisibility(View.VISIBLE);
             // codigo set cuadrado a rojo ID (integer) IDColor (integer)
         }
+        Toast.makeText(this,"Presupuesto calculado",Toast.LENGTH_SHORT).show();
+    }
+    public void realizarOperacion(View view){
+        Toast.makeText(this,"Operacion realizada",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(Graficos.this,Negocios.class);
+        startActivity(intent);
     }
 
 }
