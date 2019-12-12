@@ -155,5 +155,5 @@ public class Negocios extends AppCompatActivity {
         Intent intent3 = new Intent(Negocios.this,Graficos.class);
         startActivity(intent3);
     }
-    
+
 }
