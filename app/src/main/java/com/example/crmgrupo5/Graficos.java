@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class Graficos extends AppCompatActivity {
 
-    private ImageView grafico1,grafico2,grafico3;
+    private ImageView grafico1,grafico2,grafico3,grafico4;
     private TextView textGanancias, textCostes;
     private Spinner spinner;
     double random;
@@ -36,11 +36,13 @@ public class Graficos extends AppCompatActivity {
         grafico1 = findViewById(R.id.grafico1);
         grafico2 = findViewById(R.id.grafico2);
         grafico3 = findViewById(R.id.grafico3);
+        grafico4 = findViewById(R.id.grafico4);
 
         grafico1.setVisibility(View.GONE);
         grafico2.setVisibility(View.GONE);
         grafico3.setVisibility(View.GONE);
-        random = Math.floor(Math.random()*4+1);
+        grafico4.setVisibility(View.GONE);
+        random = Math.floor(Math.random()*5+1);
         if(random ==1){
             grafico1.setVisibility(View.VISIBLE);
         }
@@ -49,6 +51,9 @@ public class Graficos extends AppCompatActivity {
         }
         if(random == 3){
             grafico3.setVisibility(View.VISIBLE);
+        }
+        if(random ==4){
+            grafico4.setVisibility(View.GONE);
         }
     }
 

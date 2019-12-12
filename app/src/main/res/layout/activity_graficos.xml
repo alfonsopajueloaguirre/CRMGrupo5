@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203"
+        app:layout_constraintVertical_bias="0.109"
         app:srcCompat="@mipmap/grafo3" />
 
     <Button
@@ -134,5 +134,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
+
+    <ImageView
+        android:id="@+id/grafico4"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171"
+        app:srcCompat="@mipmap/grafo4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
