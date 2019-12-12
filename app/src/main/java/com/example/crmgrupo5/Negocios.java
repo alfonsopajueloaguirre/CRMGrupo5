@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Negocios extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class Negocios extends AppCompatActivity {
     private TextView textoNegocio1,textoNegocio2,textoNegocio3,textoNegocio4,textoNegocio5;
     private TextView textoIngreso1,textoIngreso2,textoIngreso3,textoIngreso4,textoIngreso5;
     private TextView textoNumero1,textoNumero2,textoNumero3,textoNumero4,textoNumero5;
+    private Button buttonMark1,buttonMark2,buttonMark3,buttonMark4,buttonMark5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,12 @@ public class Negocios extends AppCompatActivity {
         textoNumero4 = findViewById(R.id.textView_number4);
         textoNumero5 = findViewById(R.id.textView_number5);
 
+        buttonMark1 = findViewById(R.id.button_grafico1);
+        buttonMark2 = findViewById(R.id.button_grafico2);
+        buttonMark3 = findViewById(R.id.button_grafico3);
+        buttonMark4 = findViewById(R.id.button_grafico4);
+        buttonMark5 = findViewById(R.id.button_grafico5);
+
         mostrarNegocios();
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -58,6 +66,7 @@ public class Negocios extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        
     }
     public void mostrarNegocios(){
         BaseDeDatos = BBDD.getWritableDatabase();
@@ -108,18 +117,23 @@ public class Negocios extends AppCompatActivity {
 
         if(j1==empty){
             textoNumero1.setVisibility(View.GONE);
+            buttonMark1.setVisibility(View.GONE);
         }
         if(j2==empty){
             textoNumero2.setVisibility(View.GONE);
+            buttonMark2.setVisibility(View.GONE);
         }
         if(j3==empty){
             textoNumero3.setVisibility(View.GONE);
+            buttonMark3.setVisibility(View.GONE);
         }
         if(j4==empty){
             textoNumero4.setVisibility(View.GONE);
+            buttonMark4.setVisibility(View.GONE);
         }
         if(j5==empty){
             textoNumero5.setVisibility(View.GONE);
+            buttonMark5.setVisibility(View.GONE);
         }
 
         visibilidad(j1,p1,textoNegocio2,textoIngreso2);
