@@ -125,20 +125,37 @@ public class Clientes extends AppCompatActivity {
 
         }else {
 
-            j1="";
-            j2="";
-            j3="";
-            j4="";
-            j5="";
-            j6="";
-            p1="";
-            p2="";
-            p3="";
-            p4="";
-            p5="";
-            p6="";
+            j1=empty;
+            j2=empty;
+            j3=empty;
+            j4=empty;
+            j5=empty;
+            j6=empty;
+            p1=empty;
+            p2=empty;
+            p3=empty;
+            p4=empty;
+            p5=empty;
+            p6=empty;
         }
-
+        if(j1==empty){
+            textoContacto1.setVisibility(View.GONE);
+        }
+        if(j2==empty){
+            textoContacto2.setVisibility(View.GONE);
+        }
+        if(j3==empty){
+            textoContacto3.setVisibility(View.GONE);
+        }
+        if(j4==empty){
+            textoContacto4.setVisibility(View.GONE);
+        }
+        if(j5==empty){
+            textoContacto5.setVisibility(View.GONE);
+        }
+        if(j6==empty){
+            textoContacto6.setVisibility(View.GONE);
+        }
         textoNombre1.setText(j1);
         textoNombre2.setText(j2);
         textoNombre3.setText(j3);
@@ -159,6 +176,7 @@ public class Clientes extends AppCompatActivity {
         textoCorreo4.setText(c4);
         textoCorreo5.setText(c5);
         textoCorreo6.setText(c6);
+
 
         BaseDeDatos.close();
 

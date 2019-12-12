@@ -20,9 +20,6 @@ public class RegistrarReunion extends AppCompatActivity {
     private EditText dia;
     private boolean registrado;
     private Button registrar;
-    private int recordatorio;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +31,7 @@ public class RegistrarReunion extends AppCompatActivity {
         registrado = false;
         nombreCR =  findViewById(R.id.input_reunion);
         mes = findViewById(R.id.input_mes);
-
+        dia = findViewById(R.id.editText_Dia);
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,14 +43,15 @@ public class RegistrarReunion extends AppCompatActivity {
     public void RegistrarMetodo(View view){
         BasseDeDatos = BBDD.getWritableDatabase();
         String nombreClienteReunion = nombreCR.getText().toString();
-        String diaR = mes.getText().toString();
+        String mesR = mes.getText().toString();
+        String diaR = dia.getText().toString();
 
-        if(mes!=null & !registrado){
+        if(nombreClienteReunion!=null & !registrado){
             ContentValues registro = new ContentValues();
 
             registro.put("nombreCliente",nombreClienteReunion);
-            registro.put("fecha",diaR);
-            registro.put("recordatorio",recordatorio);
+            registro.put("mes",mesR);
+            registro.put("dia",diaR);
 
             BasseDeDatos.insert("BBDDReuniones",null,registro);
 
@@ -61,10 +59,10 @@ public class RegistrarReunion extends AppCompatActivity {
 
             nombreCR.setText("");
             mes.setText("");
+            dia.setText("");
             registrado = true;
-            recordatorio = -1;
         }else{
-            if(mes==null){
+            if(nombreClienteReunion==null){
                 Toast.makeText(this,"Debes rellenar el nombre del cliente",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
