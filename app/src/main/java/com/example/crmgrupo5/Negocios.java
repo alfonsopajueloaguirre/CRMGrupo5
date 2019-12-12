@@ -72,27 +72,27 @@ public class Negocios extends AppCompatActivity {
         if(fila1.moveToFirst()) {
             j1 = fila1.getString(0);
             p1 = fila1.getString(1);
-            textoNumero1.setVisibility(View.VISIBLE);
+
 
             if (fila1.moveToNext()) {
                 j2 = fila1.getString(0);
                 p2 = fila1.getString(1);
-                textoNumero2.setVisibility(View.VISIBLE);
+
             }
             if (fila1.moveToNext()) {
                 j3 = fila1.getString(0);
                 p3 = fila1.getString(1);
-                textoNumero3.setVisibility(View.VISIBLE);
+
             }
             if (fila1.moveToNext()) {
                 j4 = fila1.getString(0);
                 p4 = fila1.getString(1);
-                textoNumero4.setVisibility(View.VISIBLE);
+
             }
             if (fila1.moveToNext()) {
                 j5 = fila1.getString(0);
                 p5 = fila1.getString(1);
-                textoNumero5.setVisibility(View.VISIBLE);
+
             }
         }else {
 
@@ -107,7 +107,24 @@ public class Negocios extends AppCompatActivity {
             p4="";
             p5="";
         }
-        visibilidad(j1,p1,textoNegocio1,textoIngreso1);
+
+        if(j1==null){
+            textoNumero1.setVisibility(View.GONE);
+        }
+        if(j2==null){
+            textoNumero2.setVisibility(View.GONE);
+        }
+        if(j3==null){
+            textoNumero3.setVisibility(View.GONE);
+        }
+        if(j4==null){
+            textoNumero4.setVisibility(View.GONE);
+        }
+        if(j5==null){
+            textoNumero5.setVisibility(View.GONE);
+        }
+
+
         visibilidad(j2,p2,textoNegocio2,textoIngreso2);
         visibilidad(j3,p3,textoNegocio3,textoIngreso3);
         visibilidad(j4,p4,textoNegocio4,textoIngreso4);
