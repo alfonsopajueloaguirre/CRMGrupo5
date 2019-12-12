@@ -15,59 +15,70 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class RegistrarReunion extends AppCompatActivity {
 
-    private SQLiteDatabase BasseDeDatos;
+    private SQLiteDatabase BaseDeDatosReuniones;
     private AdminSQLiteOpenHelper BBDD;
-    private TextInputEditText nombreCR,mes;
+    private TextInputEditText nombre,mes;
     private EditText dia;
     private boolean registrado;
-    private Button registrar;
+    private Button registrarReunion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_reunion);
         BBDD = new AdminSQLiteOpenHelper(this,"BBDDReuniones",null,1);
-        registrar = findViewById(R.id.registrar);
+        registrarReunion = findViewById(R.id.registrar_reunion);
 
         registrado = false;
-        nombreCR =  findViewById(R.id.input_reunion);
+        nombre = findViewById(R.id.input_reunion);
         mes = findViewById(R.id.input_mes);
-        dia = findViewById(R.id.editText_Dia);
+        dia = findViewById(R.id.editText_dia);
 
-
+        registrarReunion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RegistrarReunion(view);
+            }
+        });
     }
-    public void RegistrarMetodo(View view){
-        BasseDeDatos = BBDD.getWritableDatabase();
-        String nombreClienteReunion = nombreCR.getText().toString();
+
+    public void RegistrarReunion(View view){
+        BaseDeDatosReuniones = BBDD.getWritableDatabase();
+        String nombreCliente = nombre.getText().toString();
         String mesR = mes.getText().toString();
         String diaR = dia.getText().toString();
 
-        if(nombreClienteReunion!=null & !registrado){
+        if(!mesR.isEmpty() & !registrado){
             ContentValues registro = new ContentValues();
 
-            registro.put("nombreCliente",nombreClienteReunion);
+            registro.put("nombreReunion",nombreCliente);
             registro.put("mes",mesR);
             registro.put("dia",diaR);
 
-            BasseDeDatos.insert("BBDDReuniones",null,registro);
+            BaseDeDatosReuniones.insert("BBDDReuniones",null,registro);
 
-            BasseDeDatos.close();
+            BaseDeDatosReuniones.close();
 
-            nombreCR.setText("");
+            nombre.setText("");
             mes.setText("");
             dia.setText("");
 
             registrado = true;
-            Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
-            Intent intent1 = new Intent(RegistrarReunion.this, Reuniones.class);
-            startActivity(intent1);
+
         }else{
-            if(nombreClienteReunion.isEmpty()){
-                Toast.makeText(this,"Debes rellenar el nombre del cliente",Toast.LENGTH_SHORT).show();
+            if(mesR.isEmpty()){
+                Toast.makeText(this,"Debes rellenar el nombre",Toast.LENGTH_SHORT).show();
+            }
+            if(diaR.isEmpty()){
+                Toast.makeText(this,"Debes rellenar el apellido",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
+        Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
+        Intent intent1 = new Intent(RegistrarReunion.this, Reuniones.class);
+        startActivity(intent1);
+
     }
 }

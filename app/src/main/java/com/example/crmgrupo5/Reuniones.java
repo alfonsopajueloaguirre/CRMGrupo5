@@ -15,12 +15,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Reuniones extends AppCompatActivity {
+
     private SQLiteDatabase BaseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
     private String tipoBBDD = "BBDDReuniones";
     private TextView textoReunion1,textoReunion2,textoReunion3,textoReunion4,textoReunion5;
     private TextView textoMes1,textoMes2,textoMes3,textoMes4,textoMes5;
     private TextView textoDia1,textoDia2,textoDia3,textoDia4,textoDia5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         BBDD = new AdminSQLiteOpenHelper(this, "BBDDReuniones", null, 1);
@@ -41,7 +43,6 @@ public class Reuniones extends AppCompatActivity {
         textoMes4 = findViewById(R.id.textView_mes4);
         textoMes5 = findViewById(R.id.textView_mes5);
 
-
         textoDia1 = findViewById(R.id.textView_dia1);
         textoDia2 = findViewById(R.id.textView_dia2);
         textoDia3 = findViewById(R.id.textView_dia3);
@@ -61,10 +62,11 @@ public class Reuniones extends AppCompatActivity {
     }
     public void mostrarReuniones(){
         BaseDeDatos = BBDD.getWritableDatabase();
-        String columnas[] = new String[]{"nombreCliente","mes","dia"};
+        String columnas[] = new String[]{"nombreReunion","mes","dia"};
         String j1="",j2="",j3="",j4="",j5="",p1="",p2="",p3="",p4="",p5="",c1="",c2="",c3="",c4="",c5="";
+        String empty = "";
 
-        Cursor fila1 = BaseDeDatos.rawQuery("select * from "+tipoBBDD+"  order by nombreCliente ASC",null);
+        Cursor fila1 = BaseDeDatos.rawQuery("select * from "+tipoBBDD+"  order by nombreReunion ASC",null);
 
         if(fila1.moveToFirst()) {
             j1 = fila1.getString(0);
@@ -93,16 +95,16 @@ public class Reuniones extends AppCompatActivity {
             }
         }else {
 
-            j1="";
-            j2="";
-            j3="";
-            j4="";
-            j5="";
-            p1="";
-            p2="";
-            p3="";
-            p4="";
-            p5="";
+            j1=empty;
+            j2=empty;
+            j3=empty;
+            j4=empty;
+            j5=empty;
+            p1=empty;
+            p2=empty;
+            p3=empty;
+            p4=empty;
+            p5=empty;
         }
 
         textoReunion1.setText(j1);
@@ -122,10 +124,11 @@ public class Reuniones extends AppCompatActivity {
         textoDia3.setText(c3);
         textoDia4.setText(c4);
         textoDia5.setText(c5);
-        
+
         BaseDeDatos.close();
 
     }
+
     public void restablecerReuniones(View view){
         BaseDeDatos = BBDD.getWritableDatabase();
 

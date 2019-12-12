@@ -36,12 +36,12 @@ public class RegistrarCliente extends AppCompatActivity {
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RegistrarMetodo(view);
+                RegistrarCliente(view);
             }
         });
 
     }
-    public void RegistrarMetodo(View view){
+    public void RegistrarCliente(View view){
         BasseDeDatos = BBDD.getWritableDatabase();
         String nombre = nombreC.getText().toString();
         String apellido = apellidoC.getText().toString();
@@ -49,6 +49,7 @@ public class RegistrarCliente extends AppCompatActivity {
 
         if(!nombre.isEmpty()&!apellido.isEmpty()&!registrado){
             ContentValues registro = new ContentValues();
+
             registro.put("nombreCliente",nombre);
             registro.put("apellido",apellido);
             registro.put("correo",correo);
@@ -60,6 +61,7 @@ public class RegistrarCliente extends AppCompatActivity {
             nombreC.setText("");
             apellidoC.setText("");
             correoC.setText("");
+
             registrado = true;
         }else{
             if(nombre.isEmpty()){
