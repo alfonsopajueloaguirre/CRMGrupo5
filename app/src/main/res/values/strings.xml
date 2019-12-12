@@ -21,8 +21,7 @@
     <string name="text_recordatorio">Recordatorio</string>
     <string name="text_si">SI</string>
     <string name="text_no">NO</string>
-    <string name="text_nombre_reunion">Nombre de la reunión</string>
-    <string name="text_fecha_reunion">Fecha de la reunión</string>
+    <string name="text_nombre_reunion">Nombre del cliente</string>
     <string name="text_dia">Día</string>
     <string name="text_mes">Mes</string>
 

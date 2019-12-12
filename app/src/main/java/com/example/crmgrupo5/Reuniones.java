@@ -19,7 +19,7 @@ public class Reuniones extends AppCompatActivity {
     private String tipoBBDD = "BBDDReuniones";
     private TextView textoReunion1,textoReunion2,textoReunion3,textoReunion4,textoReunion5;
     private TextView textoMes1,textoMes2,textoMes3,textoMes4,textoMes5;
-    private TextView textoDia,textoDia2,textoDia3,textoDia4,textoDia5;
+    private TextView textoDia1,textoDia2,textoDia3,textoDia4,textoDia5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         BBDD = new AdminSQLiteOpenHelper(this, "BBDDReuniones", null, 1);
@@ -29,24 +29,23 @@ public class Reuniones extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         textoReunion1 = findViewById(R.id.textView_cliente1);
-        textoReunion2 = findViewById(R.id.textView_contacto2);
-        textoReunion3 = findViewById(R.id.textView_contacto3);
-        textoReunion4 = findViewById(R.id.textView_contacto4);
-        textoReunion5 = findViewById(R.id.textView_contacto5);
+        textoReunion2 = findViewById(R.id.textView_cliente2);
+        textoReunion3 = findViewById(R.id.textView_cliente3);
+        textoReunion4 = findViewById(R.id.textView_cliente4);
+        textoReunion5 = findViewById(R.id.textView_cliente5);
 
-        /*textoNombre1 = findViewById(R.id.textView_nombre1);
-        textoNombre2 = findViewById(R.id.textView_nombre2);
-        textoNombre3 = findViewById(R.id.textView_nombre3);
-        textoNombre4 = findViewById(R.id.textView_nombre4);
-        textoNombre5 = findViewById(R.id.textView_nombre5);
-        textoNombre6 = findViewById(R.id.textView_nombre6);
+        textoMes1 = findViewById(R.id.textView_mes1);
+        textoMes2 = findViewById(R.id.textView_mes2);
+        textoMes3 = findViewById(R.id.textView_mes3);
+        textoMes4 = findViewById(R.id.textView_mes4);
+        textoMes5 = findViewById(R.id.textView_mes5);
 
-        textoApellido1 = findViewById(R.id.textView_apellido1);
-        textoApellido2 = findViewById(R.id.textView_apellido2);
-        textoApellido3 = findViewById(R.id.textView_apellido3);
-        textoApellido4 = findViewById(R.id.textView_apellido4);
-        textoApellido5 = findViewById(R.id.textView_apellido5);
-        textoApellido6 = findViewById(R.id.textView_apellido6);*/
+
+        textoDia1 = findViewById(R.id.textView_dia1);
+        textoDia2 = findViewById(R.id.textView_dia2);
+        textoDia3 = findViewById(R.id.textView_dia3);
+        textoDia4 = findViewById(R.id.textView_dia4);
+        textoDia5 = findViewById(R.id.textView_dia5);
 
         mostrarReuniones();
 
@@ -71,31 +70,26 @@ public class Reuniones extends AppCompatActivity {
             j1 = fila1.getString(0);
             p1 = fila1.getString(1);
             c1 = fila1.getString(2);
-            //textoContacto1.setVisibility(View.VISIBLE);
 
             if (fila1.moveToNext()) {
                 j2 = fila1.getString(0);
                 p2 = fila1.getString(1);
                 c2 = fila1.getString(2);
-                //textoContacto2.setVisibility(View.VISIBLE);
             }
             if (fila1.moveToNext()) {
                 j3 = fila1.getString(0);
                 p3 = fila1.getString(1);
                 c3 = fila1.getString(2);
-                //textoContacto3.setVisibility(View.VISIBLE);
             }
             if (fila1.moveToNext()) {
                 j4 = fila1.getString(0);
                 p4 = fila1.getString(1);
                 c4 = fila1.getString(2);
-                //textoContacto4.setVisibility(View.VISIBLE);
             }
             if (fila1.moveToNext()) {
                 j5 = fila1.getString(0);
                 p5 = fila1.getString(1);
                 c5 = fila1.getString(2);
-                //textoContacto5.setVisibility(View.VISIBLE);
             }
         }else {
 
@@ -113,26 +107,23 @@ public class Reuniones extends AppCompatActivity {
             p6="";
         }
 
-        /*textoNombre1.setText(j1);
-        textoNombre2.setText(j2);
-        textoNombre3.setText(j3);
-        textoNombre4.setText(j4);
-        textoNombre5.setText(j5);
-        textoNombre6.setText(j6);
+        textoReunion1.setText(j1);
+        textoReunion2.setText(j2);
+        textoReunion3.setText(j3);
+        textoReunion4.setText(j4);
+        textoReunion5.setText(j5);
 
-        textoApellido1.setText(p1);
-        textoApellido2.setText(p2);
-        textoApellido3.setText(p3);
-        textoApellido4.setText(p4);
-        textoApellido5.setText(p5);
-        textoApellido6.setText(p6);
+        textoDia1.setText(p1);
+        textoDia2.setText(p2);
+        textoDia3.setText(p3);
+        textoDia4.setText(p4);
+        textoDia5.setText(p5);
 
-        textoCorreo1.setText(c1);
-        textoCorreo2.setText(c2);
-        textoCorreo3.setText(c3);
-        textoCorreo4.setText(c4);
-        textoCorreo5.setText(c5);
-        textoCorreo6.setText(c6);*/
+        textoMes1.setText(c1);
+        textoMes2.setText(c2);
+        textoMes3.setText(c3);
+        textoMes4.setText(c4);
+        textoMes5.setText(c5);
 
         BaseDeDatos.close();
 

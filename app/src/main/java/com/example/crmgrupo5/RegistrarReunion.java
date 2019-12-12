@@ -32,7 +32,7 @@ public class RegistrarReunion extends AppCompatActivity {
 
         registrado = false;
         nombreCR =  findViewById(R.id.input_reunion);
-        fecha = findViewById(R.id.editText_fecha_reunion);
+        fecha = findViewById(R.id.editText_Dia);
 
         si.setOnClickListener(new View.OnClickListener() {
             @Override
