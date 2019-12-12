@@ -27,7 +27,7 @@ public class RegistrarNegocio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_negocio);
-        BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
+        BBDD = new AdminSQLiteOpenHelper(this,"BBDDNegocio",null,1);
         registrar = findViewById(R.id.registrar);
 
         registrado = false;

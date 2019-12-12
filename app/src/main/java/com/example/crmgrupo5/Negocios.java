@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class Negocios extends AppCompatActivity {
@@ -30,7 +29,6 @@ public class Negocios extends AppCompatActivity {
         setContentView(R.layout.activity_negocios);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         textoNegocio1 = findViewById(R.id.textView_negocio1);
         textoNegocio2 = findViewById(R.id.textView_negocio2);
