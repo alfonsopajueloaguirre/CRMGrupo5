@@ -9,7 +9,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_empresa"
+        android:id="@+id/layout_negocio"
         android:layout_width="250dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,31 +17,13 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521">
+        app:layout_constraintVertical_bias="0.61">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_empresa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/text_nombre_Empresa" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_fiscal"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.731">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_fiscal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/text_id_fiscal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -68,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624" />
+        app:layout_constraintVertical_bias="0.731" />
 
     <ImageView
         android:id="@+id/imageView3"
