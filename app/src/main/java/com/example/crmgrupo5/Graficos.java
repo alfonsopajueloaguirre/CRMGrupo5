@@ -12,12 +12,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class Graficos extends AppCompatActivity {
 
     private ImageView grafico1,grafico2,grafico3,grafico4;
     private TextView textGanancias, textCostes;
     private Spinner spinner;
-    double random;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,17 +44,17 @@ public class Graficos extends AppCompatActivity {
         grafico2.setVisibility(View.GONE);
         grafico3.setVisibility(View.GONE);
         grafico4.setVisibility(View.GONE);
-        random = Math.floor(Math.random()*5+1);
-        if(random ==1){
+        int random = new Random().nextInt(4);
+        if(random ==0){
             grafico1.setVisibility(View.VISIBLE);
+        }
+        if(random == 1){
+            grafico2.setVisibility(View.VISIBLE);
         }
         if(random == 2){
-            grafico1.setVisibility(View.VISIBLE);
-        }
-        if(random == 3){
             grafico3.setVisibility(View.VISIBLE);
         }
-        if(random ==4){
+        if(random ==3){
             grafico4.setVisibility(View.GONE);
         }
     }
