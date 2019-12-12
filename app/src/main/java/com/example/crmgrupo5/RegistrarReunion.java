@@ -10,13 +10,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class RegistrarReunion extends AppCompatActivity {
 
     private SQLiteDatabase BasseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
-    private EditText nombreCR,fecha;
+    private TextInputEditText nombreCR,mes;
+    private EditText dia;
     private boolean registrado;
-    private Button registrar,si,no;
+    private Button registrar;
     private int recordatorio;
 
 
@@ -27,34 +30,11 @@ public class RegistrarReunion extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_reunion);
         BBDD = new AdminSQLiteOpenHelper(this,"BBDD",null,1);
         registrar = findViewById(R.id.registrar);
-        si = findViewById(R.id.si);
-        no = findViewById(R.id.no);
 
         registrado = false;
         nombreCR =  findViewById(R.id.input_reunion);
-        fecha = findViewById(R.id.editText_Dia);
+        mes = findViewById(R.id.input_mes);
 
-        si.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recordatorio = 1;
-                si.setVisibility(View.GONE);
-            }
-        });
-
-        no.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recordatorio = 0;
-                no.setVisibility(View.GONE);
-            }
-        });
-        if(recordatorio==1){
-            no.setVisibility(View.GONE);
-        }
-        if(recordatorio==0){
-            si.setVisibility(View.GONE);
-        }
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,9 +46,9 @@ public class RegistrarReunion extends AppCompatActivity {
     public void RegistrarMetodo(View view){
         BasseDeDatos = BBDD.getWritableDatabase();
         String nombreClienteReunion = nombreCR.getText().toString();
-        String diaR = fecha.getText().toString();
+        String diaR = mes.getText().toString();
 
-        if(fecha!=null & !registrado){
+        if(mes!=null & !registrado){
             ContentValues registro = new ContentValues();
 
             registro.put("nombreCliente",nombreClienteReunion);
@@ -80,11 +60,11 @@ public class RegistrarReunion extends AppCompatActivity {
             BasseDeDatos.close();
 
             nombreCR.setText("");
-            fecha.setText("");
+            mes.setText("");
             registrado = true;
             recordatorio = -1;
         }else{
-            if(fecha==null){
+            if(mes==null){
                 Toast.makeText(this,"Debes rellenar el nombre del cliente",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
