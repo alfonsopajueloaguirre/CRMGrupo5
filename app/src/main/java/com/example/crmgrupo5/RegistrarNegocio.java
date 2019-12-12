@@ -3,6 +3,7 @@ package com.example.crmgrupo5;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -10,11 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class RegistrarNegocio extends AppCompatActivity {
 
     private SQLiteDatabase BasseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
-    private EditText nombreE,ingresosE,IDE;
+    private TextInputEditText nombreE;
+    private EditText ingresosE;
     private boolean registrado;
     private Button registrar;
 
@@ -29,7 +33,7 @@ public class RegistrarNegocio extends AppCompatActivity {
         registrado = false;
         nombreE =  findViewById(R.id.input_empresa);
         ingresosE = findViewById(R.id.editText_ingresos);
-        IDE = findViewById(R.id.input_fiscal);
+
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,13 +47,13 @@ public class RegistrarNegocio extends AppCompatActivity {
         BasseDeDatos = BBDD.getWritableDatabase();
         String nombreEmpresa = nombreE.getText().toString();
         String ingresos = ingresosE.getText().toString();
-        String id = IDE.getText().toString();
 
-        if(!id.isEmpty()& !registrado){
+
+        if(!nombreEmpresa.isEmpty()& !registrado){
             ContentValues registro = new ContentValues();
             registro.put("nombreEmpresa",nombreEmpresa);
             registro.put("ingresos",ingresos);
-            registro.put("IdFiscal",id);
+
 
             BasseDeDatos.insert("BBDDNegocio",null,registro);
 
@@ -57,15 +61,18 @@ public class RegistrarNegocio extends AppCompatActivity {
 
             nombreE.setText("");
             ingresosE.setText("");
-            IDE.setText("");
+
             registrado = true;
         }else{
-            if(id.isEmpty()){
+            if(nombreEmpresa.isEmpty()){
                 Toast.makeText(this,"Debes rellenar el número de identificación fiscal",Toast.LENGTH_SHORT).show();
             }
             if(registrado){
                 Toast.makeText(this, "Ya te has registrado", Toast.LENGTH_SHORT).show();
             }
         }
+        Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
+        Intent intent1 = new Intent(RegistrarNegocio.this, Negocios.class);
+        startActivity(intent1);
     }
 }
