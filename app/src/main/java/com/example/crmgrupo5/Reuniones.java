@@ -11,11 +11,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.TextView;
 
 public class Reuniones extends AppCompatActivity {
     private SQLiteDatabase BaseDeDatos;
     private AdminSQLiteOpenHelper BBDD;
     private String tipoBBDD = "BBDDReuniones";
+    private TextView textoReunion1,textoReunion2,textoReunion3,textoReunion4,textoReunion5;
+    private TextView textoMes1,textoMes2,textoMes3,textoMes4,textoMes5;
+    private TextView textoDia,textoDia2,textoDia3,textoDia4,textoDia5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         BBDD = new AdminSQLiteOpenHelper(this, "BBDDReuniones", null, 1);
@@ -23,6 +27,26 @@ public class Reuniones extends AppCompatActivity {
         setContentView(R.layout.activity_reuniones);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        textoReunion1 = findViewById(R.id.textView_cliente1);
+        textoReunion2 = findViewById(R.id.textView_contacto2);
+        textoReunion3 = findViewById(R.id.textView_contacto3);
+        textoReunion4 = findViewById(R.id.textView_contacto4);
+        textoReunion5 = findViewById(R.id.textView_contacto5);
+
+        /*textoNombre1 = findViewById(R.id.textView_nombre1);
+        textoNombre2 = findViewById(R.id.textView_nombre2);
+        textoNombre3 = findViewById(R.id.textView_nombre3);
+        textoNombre4 = findViewById(R.id.textView_nombre4);
+        textoNombre5 = findViewById(R.id.textView_nombre5);
+        textoNombre6 = findViewById(R.id.textView_nombre6);
+
+        textoApellido1 = findViewById(R.id.textView_apellido1);
+        textoApellido2 = findViewById(R.id.textView_apellido2);
+        textoApellido3 = findViewById(R.id.textView_apellido3);
+        textoApellido4 = findViewById(R.id.textView_apellido4);
+        textoApellido5 = findViewById(R.id.textView_apellido5);
+        textoApellido6 = findViewById(R.id.textView_apellido6);*/
 
         mostrarReuniones();
 
@@ -73,17 +97,6 @@ public class Reuniones extends AppCompatActivity {
                 c5 = fila1.getString(2);
                 //textoContacto5.setVisibility(View.VISIBLE);
             }
-            if (fila1.moveToNext()) {
-                j6 = fila1.getString(0);
-                p6 = fila1.getString(1);
-                c6 = fila1.getString(2);
-                //textoContacto6.setVisibility(View.VISIBLE);
-                //extoNombre6.setVisibility(View.VISIBLE);
-                //textoApellido6.setVisibility(View.VISIBLE);
-                //textoCorreo6.setVisibility(View.VISIBLE);
-            }
-
-
         }else {
 
             j1="";
